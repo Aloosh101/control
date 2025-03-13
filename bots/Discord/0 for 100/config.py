@@ -1,0 +1,4 @@
+TOKEN = ''
+SERVER_ID = 123456789
+gameChannelID = 123456789
+statusChannelID = 123456789

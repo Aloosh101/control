@@ -1,0 +1,127 @@
+Traceback (most recent call last):
+  File "c:\Users\AliAl\OneDrive\سطح المكتب\projects\bots\telegram\sayku\saik0.py", line 463, in <module>
+    bot.polling()
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1043, in polling        
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,       
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1118, in __threaded_polling
+    raise e
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1074, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 147, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 90, in run
+    task(*args, **kwargs)
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 6720, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\AliAl\OneDrive\سطح المكتب\projects\bots\telegram\sayku\saik0.py", line 270, in handle_code
+    me = loop.run_until_complete(client.sign_in(phone_number, code, phone_code_hash=phone_code_hash))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\client\auth.py", line 356, in sign_in     
+    result = await self(request)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\client\users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\client\users.py", line 63, in _call       
+    future = sender.send(request, ordered=ordered)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\mtprotosender.py", line 181, in send
+    state = RequestState(request)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\requeststate.py", line 17, in __init__
+    self.data = bytes(request)
+                ^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\tl\tlobject.py", line 194, in __bytes__   
+    return self._bytes()
+           ^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\tl\functions\auth.py", line 652, in _bytes    self.serialize_bytes(self.phone_code_hash),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\tl\tlobject.py", line 112, in serialize_bytes
+    raise TypeError(
+TypeError: bytes or str expected, not <class 'telethon.tl.types.auth.SentCode'>
+Task was destroyed but it is pending!
+task: <Task pending name='Task-8' coro=<UpdateMethods._update_loop() running at C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\client\updates.py:425> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+Task was destroyed but it is pending!
+task: <Task pending name='Task-9' coro=<UpdateMethods._keepalive_loop() running at C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\client\updates.py:459> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+Task was destroyed but it is pending!
+task: <Task pending name='Task-10' coro=<Queue.get() running at C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\queues.py:158> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_release_waiter(<Future pendi...ask_wakeup()]>)() at C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:421]>
+Exception ignored in: <coroutine object Queue.get at 0x00000230730E5C40>
+Traceback (most recent call last):
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\queues.py", line 160, in get
+    getter.cancel()  # Just in case getter is not done yet.
+    ^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 761, in call_soon
+    self._check_closed()
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 519, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task was destroyed but it is pending!
+task: <Task pending name='Task-6' coro=<MTProtoSender._send_loop() running at C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\mtprotosender.py:462> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+Task was destroyed but it is pending!
+task: <Task pending name='Task-7' coro=<MTProtoSender._recv_loop() running at C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\mtprotosender.py:505> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+Task was destroyed but it is pending!
+task: <Task pending name='Task-4' coro=<Connection._send_loop() running at C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\connection\connection.py:313> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+Task was destroyed but it is pending!
+task: <Task pending name='Task-5' coro=<Connection._recv_loop() running at C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\connection\connection.py:332> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+Unhandled error while receiving data
+Traceback (most recent call last):
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\queues.py", line 158, in get
+    await getter
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\mtprotosender.py", line 505, in _recv_loop
+    body = await self._connection.recv()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\connection\connection.py", line 299, in recv
+    result, err = await self._recv_queue.get()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\queues.py", line 160, in get
+    getter.cancel()  # Just in case getter is not done yet.
+    ^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 761, in call_soon
+    self._check_closed()
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 519, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Unexpected exception in the send loop
+Traceback (most recent call last):
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\queues.py", line 158, in get
+    await getter
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\connection\connection.py", line 313, in _send_loop
+    self._send(await self._send_queue.get())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\queues.py", line 160, in get
+    getter.cancel()  # Just in case getter is not done yet.
+    ^^^^^^^^^^^^^^^
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 761, in call_soon
+    self._check_closed()
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 519, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Exception ignored in: <coroutine object Connection._send_loop at 0x00000230730E5700>
+RuntimeError: coroutine ignored GeneratorExit
+Exception ignored in: <coroutine object Connection._recv_loop at 0x00000230730F55D0>
+Traceback (most recent call last):
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\connection\connection.py", line 350, in _recv_loop
+    await self.disconnect()
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\network\connection\connection.py", line 258, in disconnect
+    await helpers._cancel(
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\site-packages\telethon\helpers.py", line 174, in _cancel
+    task.cancel()
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 761, in call_soon
+    self._check_closed()
+  File "C:\Users\AliAl\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 519, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed

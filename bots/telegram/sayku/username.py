@@ -10,8 +10,8 @@ print("المطور: @ \n\n")
 async def now_account(phone_number,session_number):
     client = TelegramClient(
     str(session_number),
-    api_id="20080380",
-    api_hash="1bf64fab6d33e1f58616eadca0f3e507"
+    api_id="12345678",
+    api_hash="123456789o"
     )
 
     
